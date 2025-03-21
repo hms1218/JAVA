@@ -15,6 +15,13 @@ public class Ex1_Scanner {
 		//obj.key = value; //프로퍼티가 없으면 추가
 		Scanner sc = new Scanner(System.in); //Scanner 객체 선언
 		
+		//Scanner 클래스
+		//next() : 문자열 입력 (띄어쓰기하면 끝남)
+		//nextLine() : 문자열 입력 (엔터치면 끝남)
+		//nextInt() : 정수 입력
+		//nextFloat() : 실수 입력(float형)
+		//nextDouble() : 실수 입력(double형)
+		
 //		System.out.print("정수 입력 : ");
 //		int n = sc.nextInt(); //정수 입력받기
 //	

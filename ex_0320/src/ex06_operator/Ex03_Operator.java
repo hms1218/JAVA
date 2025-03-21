@@ -29,11 +29,7 @@ public class Ex03_Operator {
 		int x = 7; //0111
 		System.out.println("~x : "+ ~x); //1000 ->8
 		//~x -> -(x+1)
-		
-		//6 0110 -> 1001  
-		//5 0101 -> 1010
-		//4 0100 -> 1011  
-		
+
 		//시프트 연산자
 		//비트의 이동
 		// <<, >>
@@ -52,12 +48,13 @@ public class Ex03_Operator {
 		result = ++i >= i2 ? 1 : 0;
 		System.out.println("result : "+result);
 		
+		//test
 		//다음의 결과값을 예상하여 쓰시오
 		int x1 = 5;
 		int y1 = x1++; //-> 5(+1)
 		
-		System.out.println("x의 값 : " + x1); //x1 = 6
-		System.out.println("y의 값 : " + y1); //y = 5
+		System.out.println("x1의 값 : " + x1); //x1 = 6
+		System.out.println("y1의 값 : " + y1); //y = 5
 		
 		//다음 연산의 결과를 예상하여 쓰시오
 		int x2 = 10;
@@ -68,9 +65,15 @@ public class Ex03_Operator {
 		//다음 연산의 결과를 예상하여 쓰시오
 		//int a = 10;
 		//int b = 12;
-		//++a >= b || 2 + 7 <= b && 13 - b >= 0 && (a += b 22) - (a % b 12) > 10;
+		//++a >= b || 2 + 7 <= b && 13 - b >= 0 && (a += b) - (a % b 12) > 10;
 		//11>=12,false||9<=12,false,false&&1>=0true,false&&22-12=10>10false
-		//false
+		//a=22
+		//23>=12||9<=12&&1>=0&&20>10;
+		//t||t&&t&&t
+		//true
+		//11>=12||9<=12&&1>=0&&20>10
+		//f||t&&t&&t
+		//true
 		
 		//국어,영어,수학에 대한 점수를 키보드를 이용해 정수로 입력받고
 		//1. 세 과목에 대한 합계 출력하기
