@@ -69,6 +69,21 @@ public class Ex02_do_while {
 //		}while(k!=password); 
 		// -> k==password가 될 때 if문을 들어가지않고 바로 while문을 빠져나오기 때문에 결과가 안나온다.
 		
+//		Scanner sc = new Scanner(System.in);
+//		int pw = 9486;
+//		int answer = 0;
+//		do {
+//			System.out.print("비밀번호를 입력하세요 : ");
+//			answer = sc.nextInt();
+//			
+//			if(pw == answer) {
+//				System.out.println("비밀번호가 맞습니다.");
+//			} else {
+//				System.out.println("비밀번호가 틀렸습니다.");
+//			}
+//			
+//		}while(pw != answer); //비밀번호가 맞지않으면 다시 반복해야함
+		
 		//학생의 국어,영어,수학 점수를 입력받는다.
 		//단, 각 과목은 40점 이상이어야 하며,
 		//40점 미만이면 해당 과목 점수를 다시 입력받아야 한다.
