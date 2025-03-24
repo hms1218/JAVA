@@ -68,6 +68,7 @@ public class Exam1 {
 		for(int i=0; i<nums2.length;i++) {
 			count[nums2[i]]++;
 			//count[1] count[2] count[1] count[3] count[2] count[1] count[4]
+			//count = [0,3,2,1,1]
 			
 		}
 		for(int i=1; i<=4; i++) {
@@ -94,7 +95,7 @@ public class Exam1 {
 		char[] cards = {'1','L','O','2','V','3','E'};
 		String myWord = "";
 		
-		//배열에서 영문자만 추출하여 이어붙혀 출력
+		//배열에서 영문자만 추출하여 이어붙여 출력
 		for(int i=0;i<cards.length;i++) {
 			if(cards[i]>=65 && cards[i]<=90) {
 				myWord += cards[i];
@@ -140,42 +141,33 @@ public class Exam1 {
 		
 		int money = rd.nextInt(500)+1;
 		money *= 10;
-		int fiveHd = 0;
-		int hd = 0;
-		int fifty = 0;
-		int ten = 0;
 		
 		int[] coin = {500,100,50,10};
-		
-		fiveHd = money / 500;
-		hd = (money-fiveHd) / 100;
-		fifty = (fiveHd-hd) / 50;
-		ten = (hd-fifty) / 10;
-		System.out.printf("%d,%d,%d,%d",fiveHd,hd,fifty,ten);
-		
-		System.out.println();
-		
+
 		System.out.println("금액 : "+money);
 		for(int i=0; i<coin.length; i++) {
 			int res = money / coin[i];
 			System.out.printf("%d원 : %d\n",coin[i],res);
 			money %= coin[i];
 		}
+		//4070 / 500 = 8 + 70
+		//money = 70 /100 = 0 + 70
+		
 		
 		//로또번호 생성하기
 		//1~45사이의 난수를 발생시켜 로또번호를 생성하는 프로그램 만들기
+		int[] lotto = new int[6];
 		
-		
-		for(int i=0; i<6; i++) {
-			int lotto = rd.nextInt(45)+1;
-	
-			if(i>0) {
-				
+		out:for(int i=0; i<lotto.length;) {
+			lotto[i] = rd.nextInt(45)+1;
+			for(int j=0;j<i;j++) {
+				if(lotto[i] == lotto[j]) {
+					continue out;
+				}
 			}
-			
-			System.out.println(lotto);
+			i++;
 		}
-		
+		System.out.println(Arrays.toString(lotto));
 	}
 	
 }
