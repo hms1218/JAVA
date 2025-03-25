@@ -108,11 +108,19 @@ public class MethodTest {
 //  8의 갯수 : ####### 7
 //  9의 갯수 : ########## 10
 	
+	int[] count = new int[10];
+	String sh = "#";
 	
-	
-	
-	
-	
+	public void PrintGraph(int[] random) {
+		for(int i=0; i<random.length; i++) {
+			random[i] = rd.nextInt(10);
+			count[random[i]]++;
+		}
+		for(int i=0; i<10; i++) {
+			System.out.printf("%d의 갯수 : %s %d\n",i,sh.repeat(count[i]),count[i]);
+		}
+		
+	}
 	
 	
 	
