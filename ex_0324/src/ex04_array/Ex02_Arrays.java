@@ -76,7 +76,8 @@ public class Ex02_Arrays {
 		
 		//1. Arrays 클래스를 이용한 깊은 복사
 		int[] newCards2 = Arrays.copyOf(cards, cards.length);
-		
+		//copyOf() -> 배열을 얕은 복사
+
 		//2. 반복문을 이용한 깊은 복사
 		for(int i=0; i<cards.length;i++) {
 			newCards[i] = cards[i];
