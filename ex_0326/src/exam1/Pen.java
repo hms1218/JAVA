@@ -1,11 +1,16 @@
 package exam1;
 
 public class Pen {
-	int amount;
+	private int amount; 
 	
-	public Pen(int amount){
+	public void setAmount(int amount){
 		this.amount = amount;
 	}
+	
+	public int getAmount() {
+		return amount;
+	}
+	
 }
 
 //class SharpPencil{ //샤프펜

@@ -1,8 +1,8 @@
 package exam1;
 
-public class FountainPen extends Ballpen{
+public class FountainPen extends Ballpen{ //만년필
 	
-	public FountainPen(int amount, String color) {
-		super(amount,color);
+	public void refill(int n){
+		setAmount(n);
 	}
 }
