@@ -7,4 +7,8 @@ public class SharpPencil extends Pen{ //샤프펜
 		this.width = width;
 	}
 	
+	public int getWidth() {
+		return width;
+	}
+	
 }
