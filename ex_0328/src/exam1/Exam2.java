@@ -69,13 +69,16 @@ public class Exam2 {
 		//012345678
 		System.out.println("입력 : ");
 		String hm = sc.next();
+		String rev = "";
 		
-		for(int i=0; i<hm.length(); i++) {
-			if(hm.charAt(i)==(hm.charAt(hm.length()-i))){
-				System.out.println(hm+"은(는) 회문입니다.");
-			} else {
-				System.out.println(hm+"은(는) 회문이 아닙니다.");
-			}
+		for(int i=hm.length()-1; i>=0; i--) {
+			rev += hm.charAt(i);
+		}
+		System.out.println(rev);
+		if(hm.equals(rev)) {
+			System.out.println(hm+"은 회문입니다.");
+		}else {
+			System.out.println(hm+"은 회문이 아닙니다.");
 		}
 		
 //		String rev = "";
