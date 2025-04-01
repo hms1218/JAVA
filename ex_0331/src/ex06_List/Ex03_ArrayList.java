@@ -6,14 +6,14 @@ public class Ex03_ArrayList {
 	public static void main(String[] args) {
 		//사람에 대한 정보를 저장하고싶다.
 		//이름,키,몸무게,주소,혈액형,나이...
-		ArrayList<Person> list = new ArrayList<>();
+		ArrayList<Person1> list = new ArrayList<>();
 		
-		Person p1 = new Person();
+		Person1 p1 = new Person1();
 		p1.name = "홍길동";
 		p1.age = 30;
 		p1.height = 182.4;
 		
-		Person p2 = new Person();
+		Person1 p2 = new Person1();
 		p2.name = "홍길순";
 		p2.age = 24;
 		p2.height = 176.4;
