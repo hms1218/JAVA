@@ -7,3 +7,9 @@ package ex02_lamda;
 public interface MyCalculator {
 	int plus(int num1, int num2);
 }
+
+//인터페이스 :
+//상수 -> 한 번 대입하면 바뀌지 않는 값
+//추상메서드 -> 구현체({})가 없는 메서드
+//default 메서드 -> default 접근제한자를 가진 완전한 메서드
+//만 갖는다.
