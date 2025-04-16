@@ -2,6 +2,7 @@ package test;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -38,14 +39,36 @@ public class TestMain {
 			System.out.println(student.getKey());
 			}
 		}
-        
-        String number = "123";
-        int x = 0;
-        
-        for(int i=0; i<number.length(); i++) {
-        	
-        }
-        
+
+		String number = "123";
+		int answer = 0;
+		
+//		for(int i=0; i<number.length(); i++) {
+//			char c = number.charAt(i);
+//			answer += c - '0';
+//		}
+//		System.out.println(answer);
+		
+		String[] list = number.split("");
+
+		int sum = 0;
+		for(int i=0; i<number.length(); i++) {
+			sum += Integer.parseInt(list[i]);
+		}
+		answer = sum % 9;
+		
+		int a=2;
+		int b=2;
+		int c=2;
+		int d=2;
+		
+		if((a==b)&&(b==c)&&(c==d)&&(d==a)) {
+			System.out.println(a);
+		}
+		
+		
+		
+		
 		
 	}
 }
