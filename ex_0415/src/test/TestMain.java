@@ -41,92 +41,70 @@ public class TestMain {
 			}
 		}
         
-        String number = "123";
-        int x = 0;
-        
-        for(int i=0; i<number.length(); i++) {
-        	
-        }
-        
-        String my_string = "rermgorpsam";
-        int[][] queries = {{2, 3}, {0, 7}, {5, 9}, {6, 10}};
-        
-        for(int[] query : queries) {
-        	int s = query[0];
-        	int e = query[1];
-        	String word = "";
-        	for(int i= e; i>= s; i--) {
-        		word += my_string.charAt(i); 
-        	}
-        	String start = my_string.substring(0,s);
-        	String end = my_string.substring(e+1);
-        	
-        	my_string = start + word + end;
-        };
-        
-//        int[] num_list = {4,2,6,1,7,6};
-//        int[] answer = {};
-//        int n = 2;
-//        
-//        if(num_list.length % 2 == 0){
-//            answer = new int[num_list.length / n];
-//        } else{
-//            answer = new int[num_list.length / n +1];
-//        }
-//        
-//        int index = 0;
-//        
-//        for(int i=0; i<num_list.length; i+=n){ 
-//            answer[index++] = num_list[i];
-//        }
-//        
-//        Arrays.sort(num_list);
-//        System.out.println(Arrays.toString(num_list));
-        
-        
-        
-        String[] my_strings = {"progressive", "hamburger", "hammer", "ahocorasick"};
-        int[][] parts = {{0, 4}, {1, 2}, {3, 5}, {7, 7}};
-        
-        String answer = "";
-        List<String> list = new ArrayList<>();
-        
-    	for(int i=0; i<my_strings.length; i++){
-            list.add(my_strings[i].substring(parts[i][0],parts[i][1]+1));
-        }
-        
-  
-        for(int j=0; j<list.size(); j++) {
-        	answer += list.get(j);
-        }
-        
-        System.out.println(answer);
-        
-        my_string = "ProgrammerS123";
-        answer = my_string.substring(my_string.length()-11);
-        System.out.println(answer);
-        
-        my_string = "xxxxixxxx";
-        
-        System.out.println(Arrays.toString(my_string.split("x")));
-        
-        int[] a = {};
-        String[] s = my_string.split("x",-1);
-        
-        System.out.println(Arrays.toString(s));
-        
-        if(my_string.endsWith("x")){
-            a = new int[s.length+1];
-        }else{
-            a = new int[s.length];
-        }
-        
-        for(int i=0; i<my_string.split("x").length; i++) {
-        	a[i] = s[i].length();
-        }
-        System.out.println(Arrays.toString(a));
-       
-        
+//		예를 들어 지갑의 크기가 30 * 15이고 지폐의 크기가 26 * 17이라면 
+//		한번 반으로 접어 13 * 17 크기로 만든 뒤 
+//		90도 돌려서 지갑에 넣을 수 있습니다. 
+//		지폐를 접을 때는 다음과 같은 규칙을 지킵니다.
+		
+//		지폐를 접을 때는 항상 길이가 긴 쪽을 반으로 접습니다.
+//		접기 전 길이가 홀수였다면 접은 후 소수점 이하는 버립니다.
+//		접힌 지폐를 그대로 또는 90도 돌려서 지갑에 넣을 수 있다면 그만 접습니다.
+		
+		int[] wallet = {50,50};
+		int[] bill = {80,30};
+		boolean b = true;
+		int count = 0;
+		
+		while(b) {
+			if((wallet[0]>=bill[0]&&wallet[1]>=bill[1]) || (wallet[0]>=bill[1]&&wallet[1]>=bill[0])) {	
+				break;
+			}else {
+				count++;
+				
+				if(bill[0]>bill[1]) {
+					if(bill[0] % 2 ==1) {
+						bill[0] = (int) Math.floor(bill[0] / 2.0);
+					}
+					else {
+						bill[0] = bill[0] / 2;
+					}
+				}else {
+					if(bill[1] % 2 ==1) {
+						bill[1] = (int) Math.floor(bill[1] / 2.0);
+					}
+					else {
+						bill[1] = bill[1] / 2;
+					}
+				}
+				
+			}
+			
+			
+		}
+		
+		System.out.println(count);
+		
+		String[][] park = {
+						  	{"A", "A", "-1", "B", "B", "B", "B", "-1"},
+						  	{"A", "A", "-1", "B", "B", "B", "B", "-1"},
+						  	{"-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1"},
+						  	{"D", "D", "-1", "-1", "-1", "-1", "E", "-1"},
+						  	{"D", "D", "-1", "-1", "-1", "-1", "-1", "F"},
+						  	{"D", "D", "-1", "-1", "-1", "-1", "E", "-1"}
+		};
+		
+		for(int i=0; i<park.length; i++) {
+			for(int j=0; j<park[i].length; j++) {
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
