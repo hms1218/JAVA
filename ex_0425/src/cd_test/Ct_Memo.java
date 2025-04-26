@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class cd_testMemo {
+public class Ct_Memo {
 	public static void main(String[] args) {
 		//기초문제 : 2의 영역
 		
